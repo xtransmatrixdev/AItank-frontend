@@ -1,14 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import Layout from './shared/Layout';
+import Step from './pages/home/components/step';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App: React.FC = () => {
   return (
-      <h1>start</h1>
-  )
-}
+    <Layout>
+      <Step />
+    </Layout>
+  );
+};
 
-export default App
+export default App;
