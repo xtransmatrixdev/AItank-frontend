@@ -1,37 +1,17 @@
 import React, { useState } from 'react';
 
 const data = [
-  {
-    title: 'Learners',
-    description: 'AI enthusiasts, students, and newcomers exploring AI',
-    image: 'Rectangle 21.png',
-    position: 'top-left'
-  },
-  {
-    title: 'Developers',
-    description: 'Developers, engineers, and makers working on AI projects',
-    image: 'Rectangle 23.png',
-    position: 'center-right'
-  },
-  {
-    title: 'Researchers',
-    description: 'AI scientists, PhD students, and experts pushing AI forward',
-    image: 'Rectangle 29.png',
-    position: 'center-left'
-  },
-  {
-    title: 'Entrepreneurs',
-    description: 'Startup founders and product managers building AI-powered businesses',
-    image: 'Rectangle 30.png',
-    position: 'bottom-right'
-  }
+  { title: 'Learners', description: 'AI enthusiasts, students, and newcomers exploring AI', image: 'Rectangle 21.png', position: 'top-left' },
+  { title: 'Developers', description: 'Developers, engineers, and makers working on AI projects', image: 'Rectangle 23.png', position: 'center-right' },
+  { title: 'Researchers', description: 'AI scientists, PhD students, and experts pushing AI forward', image: 'Rectangle 29.png', position: 'center-left' },
+  { title: 'Entrepreneurs', description: 'Startup founders and product managers building AI-powered businesses', image: 'Rectangle 30.png', position: 'bottom-right' }
 ];
 
 const HoverPage: React.FC = () => {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
 
   return (
-    <div className="bg-black text-white p-28 space-y-0 font-[Inter] min-h-screen w-full">
+    <div className="bg-black text-white p-28 space-y-0 font-inter min-h-screen w-full">
       {data.map((item, index) => (
         <div
           key={index}
@@ -40,28 +20,18 @@ const HoverPage: React.FC = () => {
           onMouseEnter={() => setHoverIndex(index)}
           onMouseLeave={() => setHoverIndex(null)}
         >
-          {/* Numbers */}
-          <div
-            className="absolute top-[4px] left-[50px] text-1xl w-[46px] h-[18px] font-medium"
-          >
+          <div className="absolute top-[4px] left-[50px] text-1xl w-[46px] h-[18px] font-medium">
             {`0${index + 1}`}
           </div>
 
-          {/* Title */}
-          <div
-            className="font-[Inter] font-semibold text-[50px] leading-[99%] w-[343px] pl-[71px]"
-          >
+          <div className="font-inter font-semibold text-[50px] leading-[99%] w-[343px] pl-[71px]">
             {item.title}
           </div>
 
-          {/* Description */}
-          <div
-            className="text-lg text-[17px] w-[650px] text-left pr-[30px] "
-          >
+          <div className="text-lg text-[17px] w-[650px] text-left pr-[30px]">
             {item.description}
           </div>
 
-          {/* Image on Hover */}
           {hoverIndex === index && (
             <img
               src={item.image}
