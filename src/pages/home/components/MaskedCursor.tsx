@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
@@ -17,14 +16,7 @@ const basePositionOffsets: { [key: number]: { x: number; y: number } } = {
 function MaskedCursor() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-=======
-import  { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 
-function MaskedCursor() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [activeIndices, setActiveIndices] = useState<number[]>([]);
->>>>>>> Loksai
 
   useEffect(() => {
     const handleResize = () => setScreenWidth(window.innerWidth);
