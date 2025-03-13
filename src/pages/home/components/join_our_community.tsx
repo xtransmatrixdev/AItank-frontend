@@ -16,15 +16,17 @@ const HeroSection: React.FC = () => {
 
   return (
     <div
-      className="relative w-full bg-primary text-white py-20 px-6 md:px-12"
+      className="relative w-full bg-primary text-white py-10 px-4 sm:py-20 sm:px-6 md:px-12 "
       onMouseMove={handleMouseMove}
     >
-      <div className="text-center max-w-[1320px] mx-auto h-[98.41px]">
+      
+      <div className="hidden md:block text-center max-w-[1320px] mx-auto">
         <h2 className="text-[40.67px] font-bold font-poppins leading-[1.5] tracking-[0.02em] mb-6">
-          Come join us in shaping the future {" "}
-          <span className="font-extrabold">CONNECT </span>
+          Come join us in shaping the future{" "}
+          <span className="font-extrabold">CONNECT</span>
           <span
-            className="inline-block mx-1 relative"
+            className="inline-block mx-1 relative align-middle"
+            style={{ marginTop: '5px' }}
             onMouseEnter={() => setHoveredVideo("/images/video.mp4")}
             onMouseLeave={() => setHoveredVideo(null)}
           >
@@ -34,15 +36,16 @@ const HeroSection: React.FC = () => {
               loop
               muted
               playsInline
-              className="w-[147.22px] h-[42.29px] rounded-[16.27px] object-cover align-middle"
+              className="w-[147.22px] h-[32px] rounded-[16.27px] object-cover"
             >
               <source src="/images/video.mp4" type="video/mp4" />
             </video>
           </span>
           <br />
-          <span className="font-extrabold">BUILD </span>
+          <span className="font-extrabold">BUILD</span>
           <span
-            className="inline-block mx-1 relative"
+            className="inline-block mx-1 relative align-middle"
+            style={{ marginTop: '5px' }}
             onMouseEnter={() => setHoveredVideo("/images/video1.mp4")}
             onMouseLeave={() => setHoveredVideo(null)}
           >
@@ -52,14 +55,15 @@ const HeroSection: React.FC = () => {
               loop
               muted
               playsInline
-              className="w-[147.22px] h-[42.29px] rounded-[16.27px] object-cover align-middle"
+              className="w-[147.22px] h-[32px] rounded-[16.27px] object-cover"
             >
               <source src="/images/video1.mp4" type="video/mp4" />
             </video>
           </span>
-          <span className="font-extrabold">INNOVATE </span>
+          <span className="font-extrabold">INNOVATE</span>
           <span
-            className="inline-block mx-1 relative"
+            className="inline-block mx-1 relative align-middle"
+            style={{ marginTop: '5px' }}
             onMouseEnter={() => setHoveredVideo("/images/video.mp4")}
             onMouseLeave={() => setHoveredVideo(null)}
           >
@@ -69,7 +73,7 @@ const HeroSection: React.FC = () => {
               loop
               muted
               playsInline
-              className="w-[147.22px] h-[42.29px] rounded-[16.27px] object-cover align-middle"
+              className="w-[147.22px] h-[32px] rounded-[16.27px] object-cover"
             >
               <source src="/images/video.mp4" type="video/mp4" />
             </video>
@@ -90,7 +94,26 @@ const HeroSection: React.FC = () => {
           </div>
         )}
 
-        {/* Button with Gradient Pulse Animation */}
+       
+        <div className="relative inline-flex items-center justify-center rounded-full p-[2px] bg-gradient-to-r from-pink-500 via-green-500 to-orange-500 animate-[pulse_3s_infinite] mt-8">
+          <button className="relative z-10 px-6 py-2 text-white bg-[#12131C] rounded-full">
+            JOIN OUR COMMUNITY
+          </button>
+        </div>
+      </div>
+
+    
+      <div className="block md:hidden text-center max-w-[1320px] mx-auto">
+        <h2 className="text-[18px] sm:text-[24px] font-bold font-poppins leading-[1.5] tracking-[0.02em] mb-6">
+          Come join us in shaping the future{" "}
+          <span className="font-extrabold">CONNECT</span> 
+          <br />
+          <span className="font-extrabold">BUILD</span> 
+          <span className="font-extrabold">INNOVATE</span> 
+          with the brightest minds in AI
+        </h2>
+
+        
         <div className="relative inline-flex items-center justify-center rounded-full p-[2px] bg-gradient-to-r from-pink-500 via-green-500 to-orange-500 animate-[pulse_3s_infinite] mt-8">
           <button className="relative z-10 px-6 py-2 text-white bg-[#12131C] rounded-full">
             JOIN OUR COMMUNITY
