@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
           <a href="#" className="hover:text-orange-500">Contact Us</a>
         </nav>
 
-        {/* Social Media Icons */}
+        
         <div className="flex gap-4">
           <a href="#" className="p-2 rounded-full bg-[#1A1B26] hover:bg-orange-500 transition">
             <FaFacebookF />
@@ -36,10 +36,9 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      {/* Divider */}
       <div className="border-t border-gray-700 my-6" />
 
-      {/* Copyright */}
+      
       <p className="text-center text-sm text-gray-500">
         © {new Date().getFullYear()} AI TANK.AI. All Rights Reserved.
       </p>
