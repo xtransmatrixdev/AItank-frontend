@@ -16,7 +16,7 @@ const MarqueeText: React.FC = () => {
   return (
     <>
       {/* Right to Left Marquee */}
-      <div className="overflow-hidden whitespace-nowrap bg-black text-white">
+      <div className="overflow-hidden whitespace-nowrap bg-black text-white ">
         <motion.div
           className="flex space-x-4 text-2xl font-bold"
           animate={{ x: ["0%", "-50%"] }} 
