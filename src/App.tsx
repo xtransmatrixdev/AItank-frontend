@@ -1,14 +1,16 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HoverPage from './pages/hovereffect';
 
-const App: React.FC = () => {
+import ScrollEffectSection from './components/scrolleffect';
+import HoverEffectSection from './components/hovereffect';
+
+
+const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HoverPage />} />
-      </Routes>
-    </Router>
+    <div className="bg-black text-white min-h-screen w-full relative overflow-hidden">
+      
+      <HoverEffectSection />
+      <ScrollEffectSection />
+      <HoverEffectSection />
+    </div>
   );
 };
 
