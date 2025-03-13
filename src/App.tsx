@@ -20,13 +20,13 @@ const App = () => {
     <Layout>
       <Main />
       <Join_our_community />
-      <ScrollEffectSection />
-      <HoverEffectSection />
-      <MarqueeText />
-      <MaskedCursor />
       <Aitank_event_banner />
       <ScrollEffectSection />
       <HoverEffectSection />
+
+      <MarqueeText />
+      <MaskedCursor />
+
       <SplineComp />
 
       <Contact />
