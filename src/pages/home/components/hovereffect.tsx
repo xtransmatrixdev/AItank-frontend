@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 import gsap from 'gsap';
 
 const data = [
-  { title: 'Learners', description: 'AI enthusiasts, students, and newcomers exploring AI', image: 'Rectangle 21.png', position: 'top-left' },
-  { title: 'Developers', description: 'Developers, engineers, and makers working on AI projects', image: 'Rectangle 23.png', position: 'center-right' },
-  { title: 'Researchers', description: 'AI scientists, PhD students, and experts pushing AI forward', image: 'Rectangle 29.png', position: 'center-left' },
-  { title: 'Entrepreneurs', description: 'Startup founders and product managers building AI-powered businesses', image: 'Rectangle 30.png', position: 'bottom-right' }
+  { title: 'Learners', description: 'AI enthusiasts, students, and newcomers exploring AI', image: '/images/Rectangle 21.png', position: 'top-left' },
+  { title: 'Developers', description: 'Developers, engineers, and makers working on AI projects', image: '/images/Rectangle 23.png', position: 'center-right' },
+  { title: 'Researchers', description: 'AI scientists, PhD students, and experts pushing AI forward', image: '/images/Rectangle 29.png', position: 'center-left' },
+  { title: 'Entrepreneurs', description: 'Startup founders and product managers building AI-powered businesses', image: '/images/Rectangle 30.png', position: 'bottom-right' }
 ];
 
 const HoverEffectSection = () => {

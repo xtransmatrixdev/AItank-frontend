@@ -1,17 +1,17 @@
 
 
 const images = [
-  { src: 'images/Rectangle 21.png', classes: 'top-[20%] left-[10%] z-10' },
-  { src: 'images/Rectangle 26.png', classes: 'top-[40%] right-[1%] z-0' },
-  { src: 'images/Rectangle 30.png', classes: 'top-[2%] left-[29%] z-10' },
-  { src: 'images/Rectangle 28.png', classes: 'top-[8%] right-[20%] z-10' },
-  { src: 'images/Rectangle 29.png', classes: 'top-[17%] left-[47%] z-10' },
+  { src: '/images/Rectangle 21.png', classes: 'top-[20%] left-[10%] z-10' },
+  { src: '/images/Rectangle 26.png', classes: 'top-[40%] right-[1%] z-0' },
+  { src: '/images/Rectangle 30.png', classes: 'top-[2%] left-[29%] z-10' },
+  { src: ' /images/Rectangle 28.png', classes: 'top-[8%] right-[20%] z-10' },
+  { src: '/images/Rectangle 29.png', classes: 'top-[17%] left-[47%] z-10' },
 
-  { src: 'images/Rectangle 22.png', classes: 'top-[45%] left-[4%] z-20' },
-  { src: 'images/Rectangle 27.png', classes: 'top-[-6%] right-[1%] z-10' },
-  { src: 'images/Rectangle 23.png', classes: 'bottom-[9%] left-[28%] z-10' },
-  { src: 'images/Rectangle 25.png', classes: 'bottom-[10%] right-[20%] z-10' },
-  { src: 'images/Rectangle 24.png', classes: 'bottom-[15%] left-[48%] z-10' },
+  { src: '/images/Rectangle 22.png', classes: 'top-[45%] left-[4%] z-20' },
+  { src: '/images/Rectangle 27.png', classes: 'top-[-6%] right-[1%] z-10' },
+  { src: '/images/Rectangle 23.png', classes: 'bottom-[9%] left-[28%] z-10' },
+  { src: ' /images/Rectangle 25.png', classes: 'bottom-[10%] right-[20%] z-10' },
+  { src: '/images/Rectangle 24.png', classes: 'bottom-[15%] left-[48%] z-10' },
 ];
 
 const ScrollEffectSection = () => {
