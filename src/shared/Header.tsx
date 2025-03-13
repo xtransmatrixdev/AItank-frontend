@@ -12,7 +12,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-[#12131C] text-white px-[1rem] sm:px-[2rem] md:px-[5rem] py-[1rem] flex justify-between items-center z-50">
-      {/* Logo */}
+    
       <div className="flex items-center">
         <img 
           src="./images/aitank_logo.png" 
@@ -21,7 +21,7 @@ const Header: React.FC = () => {
         />
       </div>
 
-      {/* Mobile Menu Icon */}
+     
       <div
         className="md:hidden flex items-center z-50"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -33,7 +33,7 @@ const Header: React.FC = () => {
         )}
       </div>
 
-      {/* Desktop Navigation */}
+     
       <nav className="hidden md:flex gap-[2rem] text-sm">
         {['HOME', 'WALL OF AI', 'COMMUNITY', 'ABOUT US'].map((link) => (
           <a
@@ -47,14 +47,12 @@ const Header: React.FC = () => {
         ))}
       </nav>
 
-      {/* Contact Button */}
       <div className="relative inline-flex items-center justify-center rounded-full p-[0.2rem] bg-gradient-to-r from-pink-500 via-green-500 to-orange-500 animate-[pulse_3s_infinite]">
         <button className="relative z-10 px-[1.5rem] py-[0.5rem] text-white bg-[#12131C] rounded-full">
           CONTACT
         </button>
       </div>
 
-      {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="absolute top-[4rem] left-0 w-full bg-[#12131C] flex flex-col items-center gap-[1rem] py-[1rem] md:hidden z-40">
           {['HOME', 'WALL OF AI', 'COMMUNITY', 'ABOUT US'].map((link) => (
