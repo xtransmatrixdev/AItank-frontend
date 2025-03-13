@@ -35,22 +35,24 @@ const HoverEffectSection = () => {
         </filter>
       </svg>
 
-      <div className="p-6 md:p-12 lg:p-20 space-y-6 font-inter">
+      <div className="p-[4vw] md:p-[3vw] lg:p-[2vw] space-y-[1vw] font-inter">
         {data.map((item, index) => (
           <div
             key={index}
-            className={`relative flex flex-col md:flex-row items-center justify-between p-4 md:p-6 lg:p-8 border-b border-gray-600 transition-all duration-300 w-full md:w-[95%] lg:w-[90%] mx-auto
+            className={`relative flex flex-col md:flex-row items-center justify-between p-[3vw] md:p-[2.5vw] lg:p-[2vw] border-b border-gray-600 transition-all duration-300 w-full md:w-[95vw] lg:w-[80vw] mx-auto
                         ${hoverIndex === index ? 'bg-orange-500 text-black' : 'bg-primary'}`}
             onMouseEnter={() => setHoverIndex(index)}
             onMouseLeave={() => setHoverIndex(null)}
           >
-            <div className="absolute top-2 left-4 md:top-4 md:left-8 lg:top-[4px] lg:left-[50px] text-xl">{`0${index + 1}`}</div>
+            <div className="absolute top-[1vw] left-[2vw] md:top-[1.5vw] md:left-[2.5vw] lg:top-[1.2vw] lg:left-[2.2vw] text-[2vw] md:text-[1.5vw] lg:text-[1.2vw] font-bold pr-[3vw]">
+              {`0${index + 1}`}
+            </div>
 
-            <div className="font-inter font-semibold text-2xl md:text-[40px] lg:text-[50px] leading-tight w-full md:w-[280px] lg:w-[343px] pl-4 md:pl-6 lg:pl-[71px]">
+            <div className="font-inter font-semibold text-[4vw] md:text-[3vw] lg:text-[2.5vw] leading-tight w-full md:w-[28vw] lg:w-[25vw] pl-[6vw]">
               {item.title}
             </div>
 
-            <div className="text-md md:text-lg lg:text-xl w-full md:w-[500px] lg:w-[650px] text-left pr-4 md:pr-6 lg:pr-[30px]">
+            <div className="text-[2vw] md:text-[1.5vw] lg:text-[1.3vw] w-full md:w-[40vw] lg:w-[35vw] text-left pl-[3vw] pr-[3vw]">
               {item.description}
             </div>
 
@@ -58,16 +60,18 @@ const HoverEffectSection = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                className={`absolute h-24 w-24 md:h-36 md:w-36 lg:h-52 lg:w-52 rounded-lg transition-all duration-300 z-10 hover-image
-                  ${item.position === 'top-left' ? 'top-[-20px] left-8 md:top-[-40px] md:left-20 lg:top-[-80px] lg:left-80' : ''}
-                  ${item.position === 'center-right' ? 'top-[-15px] right-8 md:top-[-30px] md:right-20 lg:top-[-60px] lg:right-40' : ''}
-                  ${item.position === 'center-left' ? 'top-[-15px] left-8 md:top-[-30px] md:left-20 lg:top-[-60px] lg:left-40' : ''}
-                  ${item.position === 'bottom-right' ? 'top-[-10px] right-8 md:top-[-20px] md:right-16 lg:top-[-40px] lg:right-16' : ''}`}
+                className={`absolute h-[8vw] w-[8vw] sm:h-[7vw] sm:w-[7vw] md:h-[6vw] md:w-[6vw] lg:h-[5vw] lg:w-[5vw] rounded-lg transition-all duration-300 z-10 hover-image
+                  ${item.position === 'top-left' ? 'top-[-3vw] left-[4vw]' : ''}
+                  ${item.position === 'center-right' ? 'top-[-3vw] right-[4vw]' : ''}
+                  ${item.position === 'center-left' ? 'top-[-3vw] left-[4vw]' : ''}
+                  ${item.position === 'bottom-right' ? 'top-[-2vw] right-[3vw]' : ''}`}
               />
             )}
           </div>
         ))}
       </div>
+
+      <div className="hidden md:block lg:hidden h-[0.5vw]" /> 
     </div>
   );
 };
