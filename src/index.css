@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: none;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0A0A0A] text-white;
+  }
+}
+
+@media (hover: none) {
+  .group:hover .group-hover\:opacity-100 {
+    opacity: 0;
+  }
+  .group:hover .group-hover\:opacity-0 {
+    opacity: 1;
+  }
+
+}
+
