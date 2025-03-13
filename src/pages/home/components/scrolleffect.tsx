@@ -30,7 +30,7 @@ const ScrollEffectSection = () => {
       ))}
 
       {/* Infinite Scrolling Text */}
-      <div className="absolute bottom-1/2 w-full text-center overflow-hidden whitespace-nowrap z-10">
+      <div className="absolute bottom-1/2 w-full text-center overflow-hidden whitespace-nowrap z-10"  style={{ fontFamily: "'Kumar One', cursive" }}>
         <div className="text-xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-8xl font-bold text-orange-500 animate-scroll-left">
           WHO IS IT FOR ?? WHO IS IT FOR ?? WHO IS IT FOR ?? WHO IS IT FOR ?? WHO IS IT FOR ??
           WHO IS IT FOR ?? WHO IS IT FOR ?? WHO IS IT FOR ?? WHO IS IT FOR ?? WHO IS IT FOR ??
