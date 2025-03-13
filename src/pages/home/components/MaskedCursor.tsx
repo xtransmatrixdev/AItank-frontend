@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const useMousePosition = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
     useEffect(() => {
-        const updateMousePosition = (e) => {
+        const updateMousePosition = (e: MouseEvent): void => {
             setMousePosition({ x: e.clientX, y: e.clientY });
         };
 
@@ -24,7 +24,7 @@ const textImages = {
 };
 
 const MaskedCursor = () => {
-    const [hoveredWord, setHoveredWord] = useState(null);
+    const [hoveredWord, setHoveredWord] = useState<keyof typeof textImages | null>(null);
     const { x, y } = useMousePosition();
     const size = hoveredWord ? 150 : 0;
 
@@ -34,7 +34,7 @@ const MaskedCursor = () => {
                 {words.map((word, index) => (
                     <span
                         key={index}
-                        onMouseEnter={() => setHoveredWord(word)}
+                        onMouseEnter={() => setHoveredWord(word as keyof typeof textImages)}
                         onMouseLeave={() => setHoveredWord(null)}
                         className="relative inline-block"
                     >
