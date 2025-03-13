@@ -70,7 +70,7 @@ const MaskedCursor = () => {
                         }}
                     >
                         <motion.span
-                            className="relative z-10 transition-colors duration-300 text-transparen"
+                            className="relative z-10 transition-colors duration-300 text-transparent text-6xl sm:text-7xl md:text-9xl lg:text-12xl"
                             style={{
                                 WebkitTextStroke: "2px white",
                                 WebkitBackgroundClip: "text",
