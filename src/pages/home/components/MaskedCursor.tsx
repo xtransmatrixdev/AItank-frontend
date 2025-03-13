@@ -74,7 +74,7 @@ function MaskedCursor() {
 
     return (
       <div 
-        className="relative flex items-center justify-center max-h-40 w-full"
+        className="relative flex items-center justify-center  w-full "
         onMouseEnter={() => setHoveredIndex(index)}
         onMouseLeave={() => setHoveredIndex(null)}
         onTouchStart={() => setHoveredIndex(index)}
@@ -137,14 +137,14 @@ function MaskedCursor() {
   });
 
   return (
-    <div className="relative my-4 overflow-hidden">
+    <div className="relative my-10 overflow-hidden">
       <div className="relative z-10  flex flex-col items-center justify-center text-white px-4">
-        <h1 className="text-6xl sm:text-4xl md:text-6xl lg:text-8xl font-bold tracking-tighter text-center flex flex-col gap-4 sm:gap-8">
+        <h1 className="text-6xl sm:text-4xl md:text-9xl  font-bold tracking-tighter text-center flex flex-col gap-4 sm:gap-8">
           <TextElement text="Hackathons" index={0} />
           <TextElement text="Events" index={1} />
           <TextElement text="Workshops" index={2} />
         </h1>
-        <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row gap-4 sm:space-x-4">
+        <div className="mt- sm:mt-12 flex flex-col sm:flex-row gap-4 sm:space-x-4">
           <button className="px-4 py-2 sm:px-6 sm:py-2 rounded-full border border-white/20 hover:bg-white/10 transition text-xs sm:text-sm md:text-base">
             Upcoming Event
           </button>
