@@ -7,7 +7,8 @@ import Contact from './shared/contact';
 import ScrollEffectSection from './pages/home/components/scrolleffect';
 import HoverEffectSection from './pages/home/components/hovereffect';
 
-
+import MarqueeText from './pages/home/components/MarqueeText';
+import MaskedCursor from './pages/home/components/MaskedCursor';
 
 
 const App = () => {
@@ -18,6 +19,8 @@ const App = () => {
       <Aitank_event_banner />
       <ScrollEffectSection />
       <HoverEffectSection />
+      <MarqueeText />
+      <MaskedCursor />
 
       <Contact />
     </Layout>
