@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import img from "../../../assets/Ellipse15.jpg";
+import img from "/images/Ellipse15.jpg";
 
 const MarqueeText: React.FC = () => {
   // Define the base content to repeat
@@ -16,7 +16,7 @@ const MarqueeText: React.FC = () => {
   return (
     <>
       {/* Right to Left Marquee */}
-      <div className="overflow-hidden whitespace-nowrap bg-black text-white">
+      <div className="overflow-hidden whitespace-nowrap bg-primary text-white">
         <motion.div
           className="flex space-x-4 text-2xl font-bold"
           animate={{ x: ["0%", "-50%"] }} 
@@ -28,7 +28,7 @@ const MarqueeText: React.FC = () => {
       </div>
 
       {/* Left to Right Marquee */}
-      <div className="overflow-hidden whitespace-nowrap bg-black text-white">
+      <div className="overflow-hidden whitespace-nowrap bg-primary text-white">
         <motion.div
           className="flex space-x-4 text-2xl font-bold"
           animate={{ x: ["-50%", "0%"] }} 

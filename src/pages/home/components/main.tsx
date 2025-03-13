@@ -15,7 +15,7 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[70vh] overflow-hidden bg-black">
+    <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[70vh] overflow-hidden bg-primary">
       <video
         ref={videoRef}
         autoPlay
@@ -29,7 +29,7 @@ const HeroSection: React.FC = () => {
         Your browser does not support the video tag.
       </video>
 
-      <div className="absolute top-0 left-0 w-full h-full bg-[#070202] mix-blend-multiply flex items-center justify-center">
+      <div className="absolute top-0 left-0 w-full h-full bg-primary mix-blend-multiply flex items-center justify-center">
         <h1
           className="text-[6rem] md:text-[8rem] lg:text-[10rem] text-white text-center"
           style={{ fontFamily: "'Kumar One', cursive" }}
