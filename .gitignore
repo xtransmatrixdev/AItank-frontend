@@ -24,4 +24,8 @@ dist-ssr
 *.sw?
 
 
+public\images\video.mp4
+public\images\video1.mp4
+
 .env
+
