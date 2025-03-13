@@ -24,7 +24,6 @@ const textImages = {
 };
 
 const MaskedCursor = () => {
-    const [hoveredWord, setHoveredWord] = useState(null);
     const [isMobile, setIsMobile] = useState(false);
     const [hoveredWord, setHoveredWord] = useState<keyof typeof textImages | null>(null);
     const { x, y } = useMousePosition();
@@ -64,7 +63,7 @@ const MaskedCursor = () => {
                         key={index}
                         onMouseEnter={() => !isMobile && setHoveredWord(word as keyof typeof textImages)}
                         onMouseLeave={() => !isMobile && setHoveredWord(null)}
-                        onClick={() => isMobile && setHoveredWord(word === hoveredWord ? null : word)}
+                        onClick={() => isMobile && setHoveredWord(word === hoveredWord ? null : word as keyof typeof textImages)}
                         className="relative inline-block cursor-pointer"
                         style={{
                             transform: `translateX(${isMobile ? 0 : (index === 1 ? "10%" : index === 2 ? "20%" : "0%")})`,
@@ -108,7 +107,7 @@ const MaskedCursor = () => {
             <div className="absolute inset-0 hidden md:block">
                 {words.map((word, index) => (
                     <div key={index} className={hoveredWord === word ? "opacity-100" : "opacity-50"}>
-                        {buttonConfigs[word].map((button, btnIndex) => {
+                        {buttonConfigs[word as keyof typeof buttonConfigs].map((button, btnIndex) => {
                             // Dynamic positioning based on position property
                             let positionClasses = "";
                             
