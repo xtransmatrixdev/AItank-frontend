@@ -27,7 +27,7 @@ const HoverEffectSection = () => {
   }, []);
 
   return (
-    <div className="bg-primary text-white min-h-screen w-full relative overflow-hidden">
+    <div className="bg-primary text-white mb-[4vh] w-full relative overflow-hidden">
       <svg style={{ position: 'absolute', width: 0, height: 0 }}>
         <filter id="wavy">
           <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="warp" />
@@ -35,7 +35,7 @@ const HoverEffectSection = () => {
         </filter>
       </svg>
 
-      <div className="p-[4vw] md:p-[3vw] lg:p-[2vw] space-y-[1vw] font-inter">
+      <div className=" font-inter">
         {data.map((item, index) => (
           <div
             key={index}
@@ -60,7 +60,7 @@ const HoverEffectSection = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                className={`absolute h-[8vw] w-[8vw] sm:h-[7vw] sm:w-[7vw] md:h-[6vw] md:w-[6vw] lg:h-[5vw] lg:w-[5vw] rounded-lg transition-all duration-300 z-10 hover-image
+                className={`absolute h-[15vw] w-[12vw]  rounded-lg transition-all duration-300 z-10 hover-image
                   ${item.position === 'top-left' ? 'top-[-3vw] left-[4vw]' : ''}
                   ${item.position === 'center-right' ? 'top-[-3vw] right-[4vw]' : ''}
                   ${item.position === 'center-left' ? 'top-[-3vw] left-[4vw]' : ''}
@@ -71,7 +71,7 @@ const HoverEffectSection = () => {
         ))}
       </div>
 
-      <div className="hidden md:block lg:hidden h-[0.5vw]" /> 
+      {/* <div className="hidden md:block lg:hidden h-[0.5vw]" />  */}
     </div>
   );
 };

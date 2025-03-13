@@ -34,7 +34,7 @@ const Header: React.FC = () => {
       </div>
 
      
-      <nav className="hidden md:flex gap-[2rem] text-sm">
+      <nav className="hidden md:flex gap-[10vw] text-md ">
         {['HOME', 'WALL OF AI', 'COMMUNITY', 'ABOUT US'].map((link) => (
           <a
             key={link}
@@ -47,8 +47,8 @@ const Header: React.FC = () => {
         ))}
       </nav>
 
-      <div className="relative inline-flex items-center justify-center rounded-full p-[0.2rem] bg-gradient-to-r from-pink-500 via-green-500 to-orange-500 animate-[pulse_3s_infinite]">
-        <button className="relative z-10 px-[1.5rem] py-[0.5rem] text-white bg-[#12131C] rounded-full">
+      <div className="hidden md:inline relative inline-flex items-center justify-center rounded-full p-[0.2rem] bg-gradient-to-r from-pink-500 via-green-500 to-orange-500 animate-[pulse_3s_infinite]">
+        <button className="relative z-10 px-[1.5rem] py-[0.5rem] text-white bg-[#12131C] rounded-full ">
           CONTACT
         </button>
       </div>
