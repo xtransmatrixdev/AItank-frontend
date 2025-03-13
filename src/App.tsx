@@ -1,17 +1,13 @@
-import './App.css'
-import MarqueeText from './pages/home/components/MarqueeText'
-import MaskedCursor from './pages/home/components/MaskedCursor'
+import React from 'react';
+import Layout from './shared/Layout';
+import Step from './pages/home/components/step';
 
-
-function App() {
-
+const App: React.FC = () => {
   return (
-      
-      <>
-      <MarqueeText /> 
-      <MaskedCursor/>    
-      </>
-  )
-}
+    <Layout>
+      <Step />
+    </Layout>
+  );
+};
 
-export default App
+export default App;
