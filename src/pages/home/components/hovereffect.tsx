@@ -27,7 +27,7 @@ const HoverEffectSection = () => {
   }, []);
 
   return (
-    <div className="bg-black text-white min-h-screen w-full relative overflow-hidden">
+    <div className="bg-primary text-white min-h-screen w-full relative overflow-hidden">
       <svg style={{ position: 'absolute', width: 0, height: 0 }}>
         <filter id="wavy">
           <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="warp" />
@@ -40,7 +40,7 @@ const HoverEffectSection = () => {
           <div
             key={index}
             className={`relative flex flex-col md:flex-row items-center justify-between p-4 md:p-6 lg:p-8 border-b border-gray-600 transition-all duration-300 w-full md:w-[95%] lg:w-[90%] mx-auto
-                        ${hoverIndex === index ? 'bg-orange-500 text-black' : 'bg-black'}`}
+                        ${hoverIndex === index ? 'bg-orange-500 text-black' : 'bg-primary'}`}
             onMouseEnter={() => setHoverIndex(index)}
             onMouseLeave={() => setHoverIndex(null)}
           >

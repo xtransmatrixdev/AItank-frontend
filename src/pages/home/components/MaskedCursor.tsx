@@ -1,10 +1,9 @@
 import  { useState, useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 function MaskedCursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [activeIndices, setActiveIndices] = useState<number[]>([]);
-  const controls = useAnimation();
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
