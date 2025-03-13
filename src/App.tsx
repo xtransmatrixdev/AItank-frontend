@@ -1,6 +1,6 @@
 
-import ScrollEffectSection from './components/scrolleffect';
-import HoverEffectSection from './components/hovereffect';
+import ScrollEffectSection from './pages/home/components/scrolleffect';
+import HoverEffectSection from './pages/home/components/hovereffect';
 
 
 const App = () => {

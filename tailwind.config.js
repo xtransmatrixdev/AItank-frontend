@@ -8,7 +8,7 @@ export default {
         inter: ['Inter', 'sans-serif'],
       },
       colors: {
-        primary: '#000000',
+        primary: '#12131C',
       },
       animation: {
         'scroll-left': 'scroll-left 10s linear infinite',
@@ -19,7 +19,7 @@ export default {
           to: { transform: 'translateX(-100%)' },
         },
       },
-    },
+    }, 
   },
   plugins: [],
 };
