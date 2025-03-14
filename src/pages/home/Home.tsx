@@ -7,6 +7,7 @@ import AitankEventBanner from './components/aitank_event_banner';
 import Contact from '../../shared/contact';
 import ScrollEffectSection from './components/scrolleffect';
 import HoverEffectSection from './components/hovereffect';
+import EventEmbed from './components/Eventlink';
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <JoinOurCommunity />
       <AitankEventBanner />
       <ScrollEffectSection />
+      <EventEmbed />
       <HoverEffectSection />
       <MarqueeText />
       <MaskedCursor />
