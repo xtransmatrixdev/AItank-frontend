@@ -16,11 +16,12 @@ const Home = () => {
       <JoinOurCommunity />
       <AitankEventBanner />
       <ScrollEffectSection />
-      <EventEmbed />
       <HoverEffectSection />
       <MarqueeText />
       <MaskedCursor />
       <SplineComp />
+      <EventEmbed />
+
       <Contact />
     </>
   );
