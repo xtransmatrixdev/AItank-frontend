@@ -55,7 +55,7 @@ const ContactSection = () => {
               <img src="/images/Ellipse 6.png" alt="User Avatar" className="w-10 sm:w-12 h-10 sm:h-12 rounded-full" />
               <p className="text-xs sm:text-sm text-gray-300">
                 Hi, I’m Amanda. Need help? Use the form below or email me at
-                <span className="text-[#B296F1]"> hello@xtransmatrix.com</span>.
+                <span className="text-[#B296F1]"> aitank@xtransmatrix.com</span>.
               </p>
             </div>
 
