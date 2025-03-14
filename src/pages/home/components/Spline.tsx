@@ -10,11 +10,11 @@ export default function SplineWithCircularText() {
         <h1 className="text-[4.2vw] font-bold my-3 text-center ">Trends • Breakthroughs • Research That Matters</h1>
       </div>
       
-      <div className="absolute inset-0 top-32">
+      <div className="absolute inset-0 top-[50vh]">
         <Spline scene="https://prod.spline.design/ZJg7l2KxbZpBql1i/scene.splinecode" />
       </div>
       
-      <div className="absolute inset-0 hidden md:flex items-center justify-center pointer-events-none md:pt-80">
+      <div className="absolute inset-0 hidden md:flex items-center justify-center pointer-events-none top-[35vh] ">
         <svg 
           viewBox="-250 -250 500 500" 
           width="auto" 
