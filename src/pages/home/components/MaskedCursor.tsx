@@ -50,6 +50,7 @@ const MaskedCursor = () => {
             { text: "Explore", position: "bottom-left" },
         ],
         Workshops: [
+            { text: "Join In", position: "bottom-right" },
             { text: "Explore", position: "bottom-right" },
         ],
     };
