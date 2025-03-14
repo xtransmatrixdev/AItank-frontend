@@ -86,7 +86,7 @@ const MaskedCursor = () => {
                                     <motion.a
                                         key={btnIndex}
                                         href="#"
-                                        className=" py-1 text-sm rounded-full border border-white/20 bg-black/30 hover:bg-white/10 transition"
+                                        className=" py-1 px-4 text-sm rounded-full border border-white/20 bg-black/30 hover:bg-white/10 transition"
                                         initial={{ opacity: 0, y: 10 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0, y: 10 }}

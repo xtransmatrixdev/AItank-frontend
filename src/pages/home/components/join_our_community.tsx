@@ -1,7 +1,9 @@
 import React, { useRef, useState } from "react";
 
-import video1 from "/images/video.mp4";
-import video2 from "/images/video1.mp4";
+import video1 from "/video/video.mp4";
+import video2 from "/video/video1.mp4";
+import video3 from "/video/video2.mp4";
+
 
 const HeroSection: React.FC = () => {
   const videoRefs = [
@@ -66,7 +68,7 @@ const HeroSection: React.FC = () => {
           <span
             className="inline-block mx-1 relative align-middle z-20"
             style={{ marginTop: '5px' }}
-            onMouseEnter={() => setHoveredVideo(video2)}
+            onMouseEnter={() => setHoveredVideo(video3)}
             onMouseLeave={() => setHoveredVideo(null)}
           >
             <video
@@ -77,7 +79,7 @@ const HeroSection: React.FC = () => {
               playsInline
               className="w-[147.22px] h-[32px] rounded-[16.27px] object-cover"
             >
-              <source src={video2} type="video/mp4" />
+              <source src={video3} type="video/mp4" />
             </video>
           </span>
           <span>with the brightest minds in AI</span>

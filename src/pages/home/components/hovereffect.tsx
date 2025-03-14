@@ -27,55 +27,59 @@ const useMousePosition = () => {
 const HoverEffectSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const { x, y } = useMousePosition();
-  const size = hoveredIndex !== null ? 180 : 0;
+  const size = hoveredIndex !== null ? 220 : 0; // Increased size for a bolder effect
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768; // Detect mobile view
 
   return (
-    <div className="bg-primary text-white mb-[4vh] w-full relative overflow-hidden">
+    <div className="bg-primary text-white w-full relative overflow-hidden py-[5vh]">
       <div className="font-inter">
         {data.map((item, index) => (
           <div
             key={index}
-            className={`relative flex flex-col md:flex-row items-center justify-between p-[3vw] md:p-[2.5vw] lg:p-[2vw] border-b border-gray-600 transition-all duration-300 w-full md:w-[95vw] lg:w-[80vw] mx-auto 
-              ${hoveredIndex === index ? "bg-orange-500 text-black" : "bg-primary"}`}
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
+            className={`relative flex flex-col md:flex-row items-center justify-between p-[5vw] md:p-[3.5vw] lg:p-[3vw] border-b-2 border-gray-500 
+              transition-all duration-300 w-full md:w-[95vw] lg:w-[80vw] mx-auto font-bold text-lg md:text-2xl lg:text-3xl
+              ${hoveredIndex === index && !isMobile ? "bg-orange-500 text-black" : "bg-primary"}`}
+            onMouseEnter={() => !isMobile && setHoveredIndex(index)}
+            onMouseLeave={() => !isMobile && setHoveredIndex(null)}
           >
-            <div className="absolute top-[1vw] left-[2vw] md:top-[1.5vw] md:left-[2.5vw] lg:top-[1.2vw] lg:left-[2.2vw] text-[3vw] md:text-[1.5vw] lg:text-[1.2vw] font-bold pr-[3vw]">
+            <div className="absolute top-[1.5vw] left-[2vw] md:top-[1.8vw] md:left-[3vw] lg:top-[1.5vw] lg:left-[2.5vw] text-[5vw] md:text-[2vw] lg:text-[1.8vw] font-extrabold">
               {`0${index + 1}`}
             </div>
 
-            <div className="font-inter font-semibold text-[6vw] md:text-[3vw] lg:text-[2.5vw] leading-tight w-full md:w-[28vw] lg:w-[25vw] pl-[6vw]">
+            <div className="font-semibold w-full md:w-[28vw] lg:w-[25vw] pl-[7vw] text-[6vw] md:text-[3.2vw] lg:text-[2.8vw] leading-tight">
               {item.title}
             </div>
 
-            <div className="text-[3vw] md:text-[1.5vw] lg:text-[1.3vw] w-full md:w-[40vw] lg:w-[35vw] text-left pl-[3vw] pr-[3vw]">
+            <div className="w-full md:w-[40vw] lg:w-[35vw] text-left pl-[7vw] pr-[4vw] text-[3.5vw] md:text-[1.7vw] lg:text-[1.5vw]">
               {item.description}
             </div>
           </div>
         ))}
       </div>
 
-      {/* Floating Image Effect */}
-      <AnimatePresence>
-        {hoveredIndex !== null && (
-          <motion.img
-            key={hoveredIndex}
-            src={data[hoveredIndex].image}
-            alt="hovered preview"
-            className="fixed pointer-events-none rounded-lg shadow-lg"
-            style={{
-              width: `${size}px`,
-              height: `${size}px`,
-              left: `${x - size / 2}px`,
-              top: `${y - size / 2}px`,
-            }}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.3 }}
-          />
-        )}
-      </AnimatePresence>
+      {/* Floating Image Effect (Disabled for Mobile) */}
+      {!isMobile && (
+        <AnimatePresence>
+          {hoveredIndex !== null && (
+            <motion.img
+              key={hoveredIndex}
+              src={data[hoveredIndex].image}
+              alt="hovered preview"
+              className="fixed pointer-events-none rounded-lg shadow-xl"
+              style={{
+                width: `${size}px`,
+                height: `${size}px`,
+                left: `${x - size / 2}px`,
+                top: `${y - size / 2}px`,
+              }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.3 }}
+            />
+          )}
+        </AnimatePresence>
+      )}
     </div>
   );
 };
