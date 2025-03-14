@@ -2,7 +2,7 @@ import Spline from '@splinetool/react-spline';
 
 export default function SplineWithCircularText() {
   return (
-    <div className="relative w-full h-[110vh]">
+    <div className="relative w-full h-[130vh] mb-10">
      
       <div className='absolute mb-18'>
         <h1 className="text-transparent [-webkit-text-stroke:2px_#F06F2F] md:[-webkit-text-stroke:4px_#F06F2F] text-6xl md:text-[110px] pt-8 text-center font-inter font-bold ">
@@ -11,7 +11,7 @@ export default function SplineWithCircularText() {
         <h1 className="text-[4.2vw] font-bold my-3 text-center ">Trends • Breakthroughs • Research That Matters</h1>
       </div>
       
-      <div className="absolute inset-0 top-10">
+      <div className="absolute inset-0">
         <Spline scene="https://prod.spline.design/ZJg7l2KxbZpBql1i/scene.splinecode" />
       </div>
       

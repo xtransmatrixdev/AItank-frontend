@@ -19,27 +19,31 @@ const images = [
 
 const ScrollEffectSection = () => {
   useEffect(() => {
-    const parallaxEffect = (event: { clientX: any; clientY: any; }) => {
+    interface ParallaxEvent extends MouseEvent {
+      clientX: number;
+      clientY: number;
+    }
+
+    const parallaxEffect = (event: ParallaxEvent) => {
       const { clientX: x, clientY: y } = event;
       const centerX = window.innerWidth / 2;
       const centerY = window.innerHeight / 2;
 
-      document.querySelectorAll('.image').forEach((image) => {
-        const depth = parseFloat(image.getAttribute('data-depth') || '0');
-        const moveX = (x - centerX) * (depth / 50);
-        const moveY = (y - centerY) * (depth / 50);
+      document.querySelectorAll<HTMLImageElement>('.image').forEach((image) => {
+      const depth = parseFloat(image.getAttribute('data-depth') || '0');
+      const moveX = (x - centerX) * (depth / 50);
+      const moveY = (y - centerY) * (depth / 50);
 
-        gsap.to(image, {
-          x: moveX,
-          y: moveY,
-          duration: 0.3,
-          ease: 'power2.out',
-        });
+      gsap.to(image, {
+        x: moveX,
+        y: moveY,
+        duration: 0.3,
+        ease: 'power2.out',
+      });
       });
     };
 
     window.addEventListener('mousemove', parallaxEffect);
-
     return () => {
       window.removeEventListener('mousemove', parallaxEffect);
     };
@@ -61,15 +65,35 @@ const ScrollEffectSection = () => {
           />
         ))}
 
-        <div
-          className="absolute bottom-[40%] w-full text-center overflow-hidden whitespace-nowrap z-10 text-white"
-          style={{ fontFamily: "'Kumar One', cursive" }}
-        >
-          <div className="text-xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-8xl font-bold text-orange-500 animate-scroll-left">
-            WHO IS IT FOR ?? WHO IS IT FOR ?? WHO IS IT FOR ?? WHO IS IT FOR ?? WHO IS IT FOR ??
-            WHO IS IT FOR ?? WHO IS IT FOR ?? WHO IS IT FOR ?? WHO IS IT FOR ?? WHO IS IT FOR ??
+        {/* Continuous Scrolling Text */}
+        <div className="absolute bottom-[40%] w-full overflow-hidden whitespace-nowrap z-10 text-white">
+          <div className="marquee text-xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-8xl font-bold text-orange-500">
+            <span>
+              WHO IS IT FOR ?? WHO IS IT FOR ?? WHO IS IT FOR ?? WHO IS IT FOR ?? WHO IS IT FOR ??
+            </span>
+            <span>
+              WHO IS IT FOR ?? WHO IS IT FOR ?? WHO IS IT FOR ?? WHO IS IT FOR ?? WHO IS IT FOR ??
+            </span>
           </div>
         </div>
+
+        {/* CSS for Infinite Scrolling Text */}
+        <style>
+          {`
+            .marquee {
+              display: flex;
+              gap: 2rem;
+              white-space: nowrap;
+              width: max-content;
+              animation: marquee 10s linear infinite;
+            }
+
+            @keyframes marquee {
+              from { transform: translateX(0); }
+              to { transform: translateX(-50%); }
+            }
+          `}
+        </style>
       </div>
     </div>
   );
