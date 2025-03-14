@@ -56,7 +56,7 @@ const MaskedCursor = () => {
     };
 
     return (
-        <div className="relative flex flex-col items-center justify-center text-white px-4 my-10 overflow-hidden w-full h-[500px]">
+        <div className="relative flex flex-col items-center justify-center text-white px-4 my-16 overflow-hidden w-full ">
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-9xl font-bold tracking-tighter text-center flex flex-col gap-4 sm:gap-8 relative z-10">
                 {words.map((word, index) => (
                     <span
@@ -66,7 +66,7 @@ const MaskedCursor = () => {
                         onClick={() => isMobile && setHoveredWord(word === hoveredWord ? null : word as keyof typeof textImages)}
                         className="relative inline-block cursor-pointer"
                         style={{
-                            transform: `translateX(${isMobile ? 0 : (index === 1 ? "10%" : index === 2 ? "20%" : "0%")})`,
+                            transform: `translateX(${isMobile ? 0 : (index === 1 ? "5%" : index === 2 ? "50%" : "0%")})`,
                         }}
                     >
                         <motion.span
@@ -81,7 +81,6 @@ const MaskedCursor = () => {
                             {word}
                         </motion.span>
                         
-                        {/* Mobile buttons - appear below each word when tapped */}
                         {isMobile && hoveredWord === word && (
                             <div className="flex flex-wrap gap-2 mt-2 justify-center">
                                 {buttonConfigs[word].map((button, btnIndex) => (
@@ -106,7 +105,7 @@ const MaskedCursor = () => {
             {/* Desktop Buttons with responsive positioning */}
             <div className="absolute inset-0 hidden md:block">
                 {words.map((word, index) => (
-                    <div key={index} className={hoveredWord === word ? "opacity-100" : "opacity-50"}>
+                    <div key={index} className={hoveredWord === word ? "opacity-100" : "opacity-100"}>
                         {buttonConfigs[word as keyof typeof buttonConfigs].map((button, btnIndex) => {
                             // Dynamic positioning based on position property
                             let positionClasses = "";

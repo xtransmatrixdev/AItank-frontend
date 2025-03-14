@@ -44,15 +44,15 @@ const HoverEffectSection = () => {
             onMouseEnter={() => setHoverIndex(index)}
             onMouseLeave={() => setHoverIndex(null)}
           >
-            <div className="absolute top-[1vw] left-[2vw] md:top-[1.5vw] md:left-[2.5vw] lg:top-[1.2vw] lg:left-[2.2vw] text-[2vw] md:text-[1.5vw] lg:text-[1.2vw] font-bold pr-[3vw]">
+            <div className="absolute top-[1vw] left-[2vw] md:top-[1.5vw] md:left-[2.5vw] lg:top-[1.2vw] lg:left-[2.2vw] text-[3vw] md:text-[1.5vw] lg:text-[1.2vw] font-bold pr-[3vw]">
               {`0${index + 1}`}
             </div>
 
-            <div className="font-inter font-semibold text-[4vw] md:text-[3vw] lg:text-[2.5vw] leading-tight w-full md:w-[28vw] lg:w-[25vw] pl-[6vw]">
+            <div className="font-inter font-semibold text-[6vw] md:text-[3vw] lg:text-[2.5vw] leading-tight w-full md:w-[28vw] lg:w-[25vw] pl-[6vw]">
               {item.title}
             </div>
 
-            <div className="text-[2vw] md:text-[1.5vw] lg:text-[1.3vw] w-full md:w-[40vw] lg:w-[35vw] text-left pl-[3vw] pr-[3vw]">
+            <div className="text-[3vw] md:text-[1.5vw] lg:text-[1.3vw] w-full md:w-[40vw] lg:w-[35vw] text-left pl-[3vw] pr-[3vw]">
               {item.description}
             </div>
 

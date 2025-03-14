@@ -121,12 +121,13 @@ const HeroSection: React.FC = () => {
           <span className="font-extrabold">INNOVATE</span>
           with the brightest minds in AI
         </h2>
-
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSelvXBp8GF6G3BwNcOxHbgEfslUhYYz21GNjC7qmKVvFXaEww/viewform?pli=1">
         <div className="relative inline-flex items-center justify-center rounded-full p-[2px] bg-gradient-to-r from-pink-500 via-green-500 to-orange-500 animate-[pulse_3s_infinite] mt-8">
           <button className="relative z-10 px-6 py-2 text-white bg-[#12131C] rounded-full">
-            JOIN OUR COMMUNITY
+            JOIN OUR COMMUNITY 
           </button>
         </div>
+        </a>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -14,27 +15,38 @@ const ContactSection = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setResponseMessage("");
 
-    // Simulate form submission
-    setTimeout(() => {
+    const serviceId = "default_service";  // Replace with your EmailJS Service ID
+    const templateId = "template_x94j67s"; // Replace with your EmailJS Template ID
+    const publicKey = "3gOCtH1hjdsvCz1-H"; // Replace with your EmailJS Public Key
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+    };
+
+    try {
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
       setResponseMessage("Message sent successfully!");
       setFormData({ name: "", email: "", message: "" });
-      setLoading(false);
-    }, 2000);
+    } catch (error) {
+      console.error("Email sending failed:", error);
+      setResponseMessage("Failed to send message. Please try again.");
+    }
+
+    setLoading(false);
   };
 
   return (
     <section className="relative flex justify-center px-4 sm:px-6 md:px-12 lg:px-16 py-16 sm:py-24 text-white bg-[url('/images/contact.png')] bg-cover bg-center bg-no-repeat">
       <div className="absolute inset-0 bg-black/50"></div>
 
-
-
       <div className="w-full max-w-6xl bg-black p-6 sm:p-10 rounded-lg shadow-lg border-2 border-[#7F60ED] flex flex-col md:flex-row items-center md:items-stretch gap-8 md:gap-12 mt-12 sm:mt-16 relative z-10">
-       
         <div className="w-full md:w-1/2 flex flex-col items-center px-4 sm:px-6 py-6 sm:py-8">
           <div className="w-full max-w-md">
             <h2 className="text-2xl sm:text-3xl font-semibold text-center">Get in touch with us</h2>
@@ -90,7 +102,6 @@ const ContactSection = () => {
           </div>
         </div>
 
-       
         <div className="w-full md:w-1/2 flex flex-col self-stretch">
           <div className="w-full h-full rounded-lg overflow-hidden flex-grow">
             <iframe

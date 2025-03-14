@@ -21,16 +21,16 @@ const Footer: React.FC = () => {
 
         
         <div className="flex gap-[2vw]">
-          <a href="#" className="p-[1.5vh] rounded-full bg-[#1A1B26] hover:bg-orange-500 transition">
+          {/* <a href="#" className="p-[1.5vh] rounded-full bg-[#1A1B26] hover:bg-orange-500 transition">
             <FaFacebookF />
           </a>
           <a href="#" className="p-[1.5vh] rounded-full bg-[#1A1B26] hover:bg-orange-500 transition">
             <FaTwitter />
-          </a>
-          <a href="#" className="p-[1.5vh] rounded-full bg-[#1A1B26] hover:bg-orange-500 transition">
+          </a> */}
+          <a href="https://www.linkedin.com/company/ai-tank/" className="p-[1.5vh] rounded-full bg-[#1A1B26] hover:bg-orange-500 transition">
             <FaLinkedinIn />
           </a>
-          <a href="#" className="p-[1.5vh] rounded-full bg-[#1A1B26] hover:bg-orange-500 transition">
+          <a href="https://www.instagram.com/ai_tank_xtmx/?igsh=bm5ieWdreTVkanFn#" className="p-[1.5vh] rounded-full bg-[#1A1B26] hover:bg-orange-500 transition">
             <FaInstagram />
           </a>
         </div>
