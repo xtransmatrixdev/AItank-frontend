@@ -27,7 +27,7 @@ const HeroSection: React.FC = () => {
   }, []);
 
   const openYouTubeVideo = () => {
-    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+    window.open("https://youtu.be/9FmPM0x0k8Q", "_blank");
   };
 
   const text = "▶ WATCH VIDEO • ▶ WATCH VIDEO • ";
