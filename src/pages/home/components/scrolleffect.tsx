@@ -110,7 +110,7 @@ const ScrollEffectSection = () => {
               gap: 2rem;
               white-space: nowrap;
               width: max-content;
-              animation: marquee 10s linear infinite;
+              animation: marquee 20s linear infinite;
             }
 
             @keyframes marquee {

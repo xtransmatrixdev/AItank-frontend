@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const data = [
   { title: "Learners", description: "AI enthusiasts, students, and newcomers exploring AI", image: "/images/Rectangle 21.png" },
-  { title: "Developers", description: "Developers, engineers, and makers working on AI projects", image: "/images/Rectangle 23.png" },
+  { title: "Developers", description: "Developers, engineers, and makers working on AI projects", image: "/images/img1.jpg" },
   { title: "Researchers", description: "AI scientists, PhD students, and experts pushing AI forward", image: "/images/Rectangle 29.png" },
   { title: "Entrepreneurs", description: "Startup founders and product managers building AI-powered businesses", image: "/images/Rectangle 30.png" },
 ];
