@@ -19,7 +19,7 @@ const ContactSection = () => {
     setLoading(true);
     setResponseMessage("");
 
-    // Simulate form submission
+ 
     setTimeout(() => {
       setResponseMessage("Message sent successfully!");
       setFormData({ name: "", email: "", message: "" });
@@ -29,11 +29,11 @@ const ContactSection = () => {
 
   return (
     <section className="relative flex justify-center px-4 sm:px-6 md:px-12 lg:px-16 py-16 sm:py-24 text-white bg-[url('/images/contact.png')] bg-cover bg-center bg-no-repeat">
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 bg-primary"></div>
 
 
 
-      <div className="w-full max-w-6xl bg-black p-6 sm:p-10 rounded-lg shadow-lg border-2 border-[#7F60ED] flex flex-col md:flex-row items-center md:items-stretch gap-8 md:gap-12 mt-12 sm:mt-16 relative z-10">
+      <div className="w-full max-w-6xl bg-primary p-6 sm:p-10 rounded-lg shadow-lg border-2 border-[#7F60ED] flex flex-col md:flex-row items-center md:items-stretch gap-8 md:gap-12 mt-12 sm:mt-16 relative z-10">
        
         <div className="w-full md:w-1/2 flex flex-col items-center px-4 sm:px-6 py-6 sm:py-8">
           <div className="w-full max-w-md">

@@ -15,7 +15,7 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[30vh] sm:h-[40vh] md:h-[60vh] lg:h-[70vh] overflow-hidden bg-primary">
+    <div className="relative w-full h-[30vh] sm:h-[40vh] md:h-[60vh] lg:h-[70vh] overflow-hidden bg-primary ">
       <video
         ref={videoRef}
         autoPlay
