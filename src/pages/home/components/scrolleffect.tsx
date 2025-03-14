@@ -19,9 +19,14 @@ const images = [
 
 const ScrollEffectSection = () => {
   useEffect(() => {
+    // 🖱️ Mouse Movement Parallax Effect
     interface ParallaxEvent extends MouseEvent {
       clientX: number;
       clientY: number;
+    }
+
+    interface ImageElement extends HTMLElement {
+      getAttribute(qualifiedName: string): string | null;
     }
 
     const parallaxEffect = (event: ParallaxEvent) => {
@@ -29,21 +34,41 @@ const ScrollEffectSection = () => {
       const centerX = window.innerWidth / 2;
       const centerY = window.innerHeight / 2;
 
-      document.querySelectorAll<HTMLImageElement>('.image').forEach((image) => {
-      const depth = parseFloat(image.getAttribute('data-depth') || '0');
-      const moveX = (x - centerX) * (depth / 50);
-      const moveY = (y - centerY) * (depth / 50);
+      document.querySelectorAll('.image').forEach((image) => {
+        const imgElement = image as ImageElement;
+        const depth = imgElement.getAttribute('data-depth');
+        if (depth) {
+          const moveX = (x - centerX) * (parseFloat(depth) / 50);
+          const moveY = (y - centerY) * (parseFloat(depth) / 50);
 
-      gsap.to(image, {
-        x: moveX,
-        y: moveY,
-        duration: 0.3,
-        ease: 'power2.out',
-      });
+          gsap.to(imgElement, {
+            x: moveX,
+            y: moveY,
+            duration: 0.3,
+            ease: 'power2.out',
+          });
+        }
       });
     };
 
     window.addEventListener('mousemove', parallaxEffect);
+
+    // 📜 Scroll-based Parallax Effect
+    document.querySelectorAll('.image').forEach((image) => {
+      const depth = image.getAttribute('data-depth');
+
+      gsap.to(image, {
+        y: () => `${parseFloat(depth || '0') * 50}px`, // Moves image based on depth factor
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.scroll-container',
+          start: 'top top',
+          end: 'bottom bottom',
+          scrub: 2, // Smooth scrolling effect
+        },
+      });
+    });
+
     return () => {
       window.removeEventListener('mousemove', parallaxEffect);
     };
