@@ -11,51 +11,52 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-[#12131C] text-white px-4 sm:px-8 md:px-20 py-4 flex justify-between items-center">
-      
+    <header className="bg-[#12131C] text-white px-[1rem] sm:px-[2rem] md:px-[5rem] py-[1rem] flex justify-between items-center z-50">
+      {/* Logo */}
       <div className="flex items-center">
         <img 
           src="./images/aitank_logo.png" 
           alt="Logo" 
-          className="h-10 md:h-20" 
+          className="h-[5vh] md:h-[10vh]" 
         />
       </div>
 
-      
-      <nav className="hidden md:flex gap-8 text-sm">
+      {/* Mobile Menu Icon */}
+      <div
+        className="md:hidden flex items-center z-50"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        {isMenuOpen ? (
+          <HiX className="text-[2rem] cursor-pointer" />
+        ) : (
+          <HiMenu className="text-[2rem] cursor-pointer" />
+        )}
+      </div>
+
+      {/* Desktop Navigation */}
+      <nav className="hidden md:flex gap-[2rem] text-sm">
         {['HOME', 'WALL OF AI', 'COMMUNITY', 'ABOUT US'].map((link) => (
           <a
             key={link}
             href="#"
             onClick={() => handleLinkClick(link)}
-            className={`relative ${activeLink === link ? 'after:content-[""] after:absolute after:w-full after:h-[2px] after:bg-orange-500 after:bottom-[-4px] after:left-0' : ''} hover:text-orange-500`}
+            className={`relative ${activeLink === link ? 'after:content-[\"\"] after:absolute after:w-full after:h-[0.2rem] after:bg-orange-500 after:bottom-[-0.4rem] after:left-0' : ''} hover:text-orange-500`}
           >
             {link}
           </a>
         ))}
       </nav>
 
-      
-      <div className="relative inline-flex items-center justify-center rounded-full p-[2px] bg-gradient-to-r from-pink-500 via-green-500 to-orange-500 animate-[pulse_3s_infinite]">
-        <button className="relative z-10 px-6 py-2 text-white bg-[#12131C] rounded-full">
+      {/* Contact Button */}
+      <div className="relative inline-flex items-center justify-center rounded-full p-[0.2rem] bg-gradient-to-r from-pink-500 via-green-500 to-orange-500 animate-[pulse_3s_infinite]">
+        <button className="relative z-10 px-[1.5rem] py-[0.5rem] text-white bg-[#12131C] rounded-full">
           CONTACT
         </button>
       </div>
 
-      <div
-        className="md:hidden flex items-center absolute left-1/2 transform -translate-x-1/2"
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-      >
-        {isMenuOpen ? (
-          <HiX className="text-3xl cursor-pointer" />
-        ) : (
-          <HiMenu className="text-3xl cursor-pointer" />
-        )}
-      </div>
-
-    
+      {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="absolute top-16 left-0 w-full bg-[#12131C] flex flex-col items-center gap-4 py-4 md:hidden">
+        <div className="absolute top-[4rem] left-0 w-full bg-[#12131C] flex flex-col items-center gap-[1rem] py-[1rem] md:hidden z-40">
           {['HOME', 'WALL OF AI', 'COMMUNITY', 'ABOUT US'].map((link) => (
             <a
               key={link}
