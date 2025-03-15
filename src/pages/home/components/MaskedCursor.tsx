@@ -18,9 +18,9 @@ const useMousePosition = () => {
 
 const words = ["Hackathons", "Events", "Workshops"];
 const textImages = {
-    Hackathons: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=300",
-    Events: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=300",
-    Workshops: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=300",
+    Hackathons: "images/hackathon.jpg",
+    Events: "images/events.jpg",
+    Workshops: "images/workshop.jpg",
 };
 
 const MaskedCursor = () => {

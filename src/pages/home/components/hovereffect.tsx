@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const data = [
-  { title: "Learners", description: "AI enthusiasts, students, and newcomers exploring AI", image: "/images/Rectangle 21.png" },
-  { title: "Developers", description: "Developers, engineers, and makers working on AI projects", image: "/images/img1.jpg" },
-  { title: "Researchers", description: "AI scientists, PhD students, and experts pushing AI forward", image: "/images/Rectangle 29.png" },
-  { title: "Entrepreneurs", description: "Startup founders and product managers building AI-powered businesses", image: "/images/Rectangle 30.png" },
+  { title: "Learners", description: "AI enthusiasts, students, and newcomers exploring AI", image: "/images/learner.jpg" },
+  { title: "Developers", description: "Developers, engineers, and makers working on AI projects", image: "/images/devloper.jpg" },
+  { title: "Researchers", description: "AI scientists, PhD students, and experts pushing AI forward", image: "/images/research.jpg" },
+  { title: "Entrepreneurs", description: "Startup founders and product managers building AI-powered businesses", image: "/images/enter.jpg" },
 ];
 
 // Hook to track cursor position
